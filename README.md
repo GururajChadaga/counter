@@ -1,6 +1,6 @@
 # Counter
 
-Counter is a react app that lets the user increment, decrement, square or reset the counter value. This is the perfect starter react app to explain new learners about react state management.
+Counter is a react app that lets the user increment, decrement, square or reset the counter value. This is the perfect starter react app to explain react state management to new learners.
 
 # PreRequisites
 [Node.js](https://www.google.com "https://nodejs.org/en/") must be installed.
