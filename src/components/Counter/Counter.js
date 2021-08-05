@@ -21,7 +21,7 @@ const Counter = () => {
     <Card className={classes.counter}>
       <div className={classes['counter-contents']}>
         <div className={classes['counter-value']}>
-          <p value={counterValue}>{counterValue}</p>
+          <p>{counterValue}</p>
         </div>
         <div className={classes.controls}>
           <Button onClick={decrementValueHandler}>--</Button>
