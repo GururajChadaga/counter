@@ -1,0 +1,28 @@
+.counter {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.counter-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.counter-value{
+  border: 1px solid #0e005f00;
+  background: #0b023f4b;
+  color: #0e005f;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.controls{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
