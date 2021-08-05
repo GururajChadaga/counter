@@ -1,23 +1,37 @@
-import classes from './Counter.module.css'
+import classes from './Counter.module.css';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 import { useState } from 'react';
 
-
 const Counter = () => {
-  return <Card className={classes.counter}>
-    <div className={classes['counter-contents']}>
-      <div className={classes['counter-value']}>
-        <p></p>
+  const [counterValue, setCounterValue] = useState(0);
+  const decrementValueHandler = () => {
+    setCounterValue((prevCounterValue) => prevCounterValue - 1);
+  };
+  const resetValueHandler = () => {
+    setCounterValue(0);
+  };
+  const incrementValueHandler = () => {
+    setCounterValue((prevCounterValue) => prevCounterValue + 1);
+  };
+  const squareValueHandler = () => {
+    setCounterValue((prevCounterValue) => prevCounterValue ** 2);
+  };
+  return (
+    <Card className={classes.counter}>
+      <div className={classes['counter-contents']}>
+        <div className={classes['counter-value']}>
+          <p value={counterValue}>{counterValue}</p>
+        </div>
+        <div className={classes.controls}>
+          <Button onClick={decrementValueHandler}>--</Button>
+          <Button onClick={resetValueHandler}>Reset</Button>
+          <Button onClick={incrementValueHandler}>++</Button>
+          <Button onClick={squareValueHandler}>^2</Button>
+        </div>
       </div>
-      <div className={classes.controls}>
-        <Button>--</Button>
-        <Button>Reset</Button>
-        <Button>++</Button>
-        <Button>^2</Button>
-      </div>
-    </div>
-  </Card>;
+    </Card>
+  );
 };
 
 export default Counter;
